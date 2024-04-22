@@ -1,8 +1,6 @@
 import re
-
 import requests
 import logging
-from langdetect import detect
 import sqlite3
 from telegram import ReplyKeyboardMarkup, Update
 from telegram.ext import Application, MessageHandler, filters, CommandHandler, ConversationHandler, CallbackContext
@@ -95,8 +93,8 @@ async def help_command(update, context):
     """Отправляет сообщение когда получена команда /help_command"""
     await update.message.reply_text("Функции:"
                                     "/translate - переведет любое слово с русского на английский \n"
-        "/add_words - добавит слова в твой словарик перед изучением \n"
-        "/learn_words - функция для изучения слов(перед использованием не забудьте добавить слова!) \n"
+                                    "/add_words - добавит слова в твой словарик перед изучением \n"
+                                    "/learn_words - функция для изучения слов(перед использованием не забудьте добавить слова!) \n"
                                     "/stop_add - заканчивает добавление слов \n"
                                     "/stop_learn - заканчивает изучение слов \n"
                                     "/stop_translate - заканчивает перевод слов")
