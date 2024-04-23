@@ -223,5 +223,5 @@ def main():
     application.run_polling()
 
 
-if __name__ == '__main__':
+if __name__ == '__server__':
     main()
